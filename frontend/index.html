@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List (Wails + SQLite)</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <input id="taskText" type="text" placeholder="Добавить задачу...">
+    <select id="taskPriority">
+      <option value="Low">Low</option>
+      <option value="Normal">Normal</option>
+      <option value="High">High</option>
+    </select>
+    <input id="taskDueDate" type="date">
+    <button id="addTask">Добавить</button>
+
+    <h2>Активные задачи</h2>
+    <ul id="taskList"></ul>
+
+    <h2>Выполненные задачи</h2>
+    <ul id="completedTaskList"></ul>
+  </div>
+  
+  <div id="deleteModal" class="modal">
+    <div class="modal-content">
+      <p>Вы уверены, что хотите удалить задачу?</p>
+      <button id="confirmDelete">Удалить</button>
+      <button id="cancelDelete">Отмена</button>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
